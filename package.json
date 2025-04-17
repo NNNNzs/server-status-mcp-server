@@ -1,0 +1,52 @@
+{
+  "name": "@nnnnzs/server-status-mcp-server",
+  "version": "0.0.6",
+  "description": "服务器状态监控工具 mcp服务",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "bin": {
+    "server-status-mcp-server": "./dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "npm run build && node dist/index.js",
+    "client": "npm run build && node client.js",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "README.MD"
+  ],
+  "keywords": [
+    "mcp",
+    "fastmcp",
+    "server-status",
+    "monitoring",
+    "server"
+  ],
+  "author": "nnnnzs",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "node-ssh": "^13.2.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "tsx": "^3.14.0",
+    "typescript": "^5.4.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnnnzs/server-status-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nnnnzs/server-status-mcp-server/issues"
+  },
+  "homepage": "https://github.com/nnnnzs/server-status-mcp-server#readme"
+}
